@@ -1,5 +1,6 @@
 /*
 * This layer contain bg, tiled map, each map contain info to create object
+* coin, rock
 * */
 
 
