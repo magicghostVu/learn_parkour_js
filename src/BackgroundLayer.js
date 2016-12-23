@@ -1,3 +1,9 @@
+/*
+* This layer contain bg, tiled map, each map contain info to create object
+* */
+
+
+
 var BackgroundLayer = cc.Layer.extend({
     map00: null,
     map01: null,
@@ -31,6 +37,10 @@ var BackgroundLayer = cc.Layer.extend({
 
         // create sprite sheet
         cc.spriteFrameCache.addSpriteFrames(res.background_plist);
+
+
+
+        // confusing ..... :((((((
         this.spriteSheet = new cc.SpriteBatchNode(res.background_png);
         this.addChild(this.spriteSheet);
 
@@ -41,6 +51,8 @@ var BackgroundLayer = cc.Layer.extend({
         this.scheduleUpdate();
     },
 
+
+    // load coin and rock for the map, mapIndex for what ??
     loadObjects: function (map, mapIndex) {
         // add coins
         var coinGroup = map.getObjectGroup("coin");
